@@ -1,0 +1,14 @@
+<ul data-role="listview" data-icon="false">
+    <li data-role="list-divider">
+            Subjects
+    </li>
+    {{#each subjects}}
+        <li>            
+             <!--onclick="appAction.hideSubList()"-->
+            <a href="#subject-year"> 
+                <img src="http://192.168.1.120/bacii/{{image}}" class="ui-thumbnail ui-thumbnail-circular"/>
+                <h2>{{name}}</h2>                    
+            </a>
+        </li>
+    {{/each}}
+</ul>

@@ -1,7 +1,6 @@
 bacIIView={
     renderSubject: function(){
       var subjects=bacIIModel.getSubject(); 
-      console.log(subjects);
         AppTemplate.process("subject-list.html", {subjects: subjects}, function (content) {
 //        console.log(content);
         $("#sub-list").html(content);

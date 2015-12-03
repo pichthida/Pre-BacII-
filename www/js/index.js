@@ -12,7 +12,8 @@ var app = {
     },
     onDeviceReady: function() {
 //       AppCache.clearAll();
-        bacIIModel.fetchSubject();
+//        bacIIModel.fetchSubject();
+        bacIIView.renderSubject();
     }
     
 };

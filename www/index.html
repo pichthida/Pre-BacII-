@@ -33,10 +33,20 @@
         <div data-role="page" id="subject-year">
             <!--<nd2-include data-src="component/panel.left.html"></nd2-include>-->
             <nd2-include data-src="component/Header2.html"></nd2-include>
-            <ul data-role="listview">
+            <ul data-role="listview" data-inset="true">
                 <li data-role="list-divider" id="subject"></li>
-                <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2015)">2015</a></li>
-                
+                <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2012)">
+                    <img src="img/years/2012.png">
+                <h2>ឆ្នាំ ២០១២</h2></a>
+                </li>
+                <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2013)">
+                    <img src="img/years/2013.png">
+                    <h2>ឆ្នាំ ២០១៣</h2></a>
+                </li>
+                <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2014)">
+                    <img src="img/years/2014.png">
+                <h2>ឆ្នាំ ២០១៤</h2></a>
+                </li>
             </ul>
         </div>
         <div data-role="page" id="subject-year-question" class="my-page">

@@ -1,0 +1,23 @@
+{{#each datas}}   
+    <div class="nd2-card">
+        <div class="card-title has-supporting-text">
+                <h3 class="card-primary-title" id="question-title"></h3>
+                <h5 class="card-subtitle">២០១០</h5>
+        </div>
+
+        <div class="card-supporting-text has-action has-title">
+                {{{question}}}
+        </div>
+
+        <div class="card-action">
+            <div class="row between-xs">
+                <div class="col-xs-12">
+                    <div class="box">
+                            <a href="#question-answer" onclick="bacIIModel.fetchAnswer({{id}})" class="ui-btn ui-btn-inline" style="text-transform:none;color:blue;">Answer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{{/each}}

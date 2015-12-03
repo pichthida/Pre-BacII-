@@ -1,12 +1,11 @@
 <ul data-role="listview" data-icon="false">
     <li data-role="list-divider">
-            Subjects
+        <b>មុខវិជ្ជា</b>
     </li>
     {{#each subjects}}
-        <li>            
-             <!--onclick="appAction.hideSubList()"-->
-            <a href="#subject-year"> 
-                <img src="http://192.168.1.120/bacii/{{image}}" class="ui-thumbnail ui-thumbnail-circular"/>
+        <li> 
+            <a href="#subject-year" data-transition="slide" onclick="bacIIController.setSubjectName({{id}})"> 
+                <img src="http://localhost/bacii/{{image}}" class="ui-thumbnail ui-thumbnail-circular"/>
                 <h2>{{name}}</h2>                    
             </a>
         </li>

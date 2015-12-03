@@ -3,13 +3,10 @@ var bacIIController ={
     answer:[],
     setSubjectName: function(id){
         if (id=='1'){
-            Subject="Khmer Literature";
+            Subject="Chemistry";
             SubjectID=id;
         }else if (id=='2'){
-            Subject="Mathematic";
-            SubjectID=id;
-        }else if (id=='3'){
-            Subject="Chemistry";
+            Subject="Biology";
             SubjectID=id;
         }
         $("#subject").html("<b>"+Subject+"</b>");

@@ -1,4 +1,4 @@
-var URL="http://localhost";
+var URL="http://192.168.1.101";
 var Subject;
 var SubjectID;
 var Year;

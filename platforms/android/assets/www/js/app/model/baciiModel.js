@@ -49,5 +49,35 @@ var bacIIModel ={
         console.log('error ; ', error);
       }        
       });
+    },
+    fetchQuestion: function(year){
+      Year=year;
+      $.ajax({
+      type: "GET",
+      datatype: "JSON",
+      url: URL+"/bacii/question_json.php",
+      crossDomain: true,
+      success: function (datas) {                
+//        bacIIView.renderQuestion(datas,year);
+          bacIIController.filterQuestion(datas);
+      },
+      error: function (error) {       
+        console.log('error ; ', error);
+      }        
+      });
+    },
+    fetchAnswer: function(questionID){
+      $.ajax({
+      type: "GET",
+      datatype: "JSON",
+      url: URL+"/bacii/question_json.php",
+      crossDomain: true,
+      success: function (datas) {
+          bacIIController.filterAnswer(datas,questionID);
+      },
+      error: function (error) {       
+        console.log('error ; ', error);
+      }        
+      });  
     }
 }

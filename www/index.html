@@ -24,15 +24,19 @@
         <div data-role="page" id="home">
 
             <!--<nd2-include data-src="component/panel.left.html"></nd2-include>-->
-            
             <nd2-include data-src="component/Header.html"></nd2-include>
-           
+            <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+                <nd2-include data-src="component/bottom.sheet.html"></nd2-include>
+            </div>
+            
             <div id="sub-list"></div>
+            
             
 	</div>
         <div data-role="page" id="subject-year">
             <!--<nd2-include data-src="component/panel.left.html"></nd2-include>-->
             <nd2-include data-src="component/Header2.html"></nd2-include>
+            
             <ul data-role="listview" data-inset="true">
                 <li data-role="list-divider" id="subject"></li>
                 <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2012)">
@@ -58,7 +62,8 @@
             <!--<nd2-include data-src="component/panel.left.html"></nd2-include>-->
             <nd2-include data-src="component/Header2.html"></nd2-include>
             <div id="answer"></div>
-        </div> 
+        </div>
+        
                 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

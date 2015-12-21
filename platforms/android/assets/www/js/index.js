@@ -1,4 +1,7 @@
-var URL="http://192.168.1.126";
+var URL="http://192.168.1.101";
+var Subject;
+var SubjectID;
+var Year;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -9,7 +12,8 @@ var app = {
     },
     onDeviceReady: function() {
 //       AppCache.clearAll();
-        bacIIModel.fetchSubject();
+//        bacIIModel.fetchSubject();
+        bacIIView.renderSubject();
     }
     
 };

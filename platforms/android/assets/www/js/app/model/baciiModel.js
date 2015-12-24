@@ -11,15 +11,23 @@ var bacIIModel ={
       $.ajax({
       type: "GET",
       datatype: "JSON",
-      url: URL+"/bacii/subject_json.php",
+      url: URL+"subject_json.php",
       crossDomain: true,
       success: function (datas) {
+           var c="";
          $.map(datas,function(data){
+            if(data.id%2==0){
+                c="ui-block-b";
+            }else{
+                c="ui-block-a";
+            }
             var jsondata= {
                 "id" : data.id,
                 "name" : data.name,
-                "image" : data.image
+                "image" : data.image,
+                "block" : c
             };
+            console.log(jsondata);
             bacIIModel.subject.push(jsondata);              
          });        
          bacIIView.renderSubject();
@@ -55,7 +63,7 @@ var bacIIModel ={
       $.ajax({
       type: "GET",
       datatype: "JSON",
-      url: URL+"/bacii/question_json.php",
+      url: URL+"question_json.php",
       crossDomain: true,
       success: function (datas) {                
 //        bacIIView.renderQuestion(datas,year);
@@ -70,7 +78,7 @@ var bacIIModel ={
       $.ajax({
       type: "GET",
       datatype: "JSON",
-      url: URL+"/bacii/question_json.php",
+      url: URL+"question_json.php",
       crossDomain: true,
       success: function (datas) {
           bacIIController.filterAnswer(datas,questionID);

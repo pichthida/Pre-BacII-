@@ -1,18 +1,9 @@
-<!--<a href="#subject-year" data-transition="slide" onclick="bacIIController.setSubjectName({{id}})">--> 
-    <div class="ui-grid-a">
-        <div class="ui-block-a">
-                  <a href="#subject-year" data-transition="slide" onclick="bacIIController.setSubjectName(1)">
-                    <img src="img/subjects/Chemistry.png"/>
+<div class="ui-grid-a">
+    {{#each subjects}}
+        <div class="{{block}}">
+                  <a href="#subject-year" data-transition="slide" onclick="bacIIController.setSubjectName({{id}})">
+                    <img src="http://bacii.camngo.website/{{image}}"/>
                   </a>
         </div>
-        <div class="ui-block-b">
-                  <a href="#subject-year" data-transition="slide" onclick="bacIIController.setSubjectName(2)">
-                    <img src="img/subjects/Biology.png"/>
-                  </a>
-        </div>
-        <div class="ui-block-a">
-                <a href="#subject-year" data-transition="slide" onclick="bacIIController.setSubjectName(3)">
-                    <img src="img/subjects/History.png"/>
-                </a>
-        </div>
-    </div>
+    {{/each}}
+</div>

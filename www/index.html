@@ -23,7 +23,6 @@
     <body>
         <div data-role="page" id="home">
 
-            <!--<nd2-include data-src="component/panel.left.html"></nd2-include>-->
             <nd2-include data-src="component/Header.html"></nd2-include>
             <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
                 <nd2-include data-src="component/bottom.sheet.html"></nd2-include>
@@ -34,32 +33,26 @@
             
 	</div>
         <div data-role="page" id="subject-year">
-            <!--<nd2-include data-src="component/panel.left.html"></nd2-include>-->
+            
             <nd2-include data-src="component/Header2.html"></nd2-include>
             
             <ul data-role="listview" data-inset="true">
                 <li data-role="list-divider" id="subject"></li>
-                <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2012)">
-                    <img src="img/years/2012.png">
-                <h2>ឆ្នាំ ២០១២</h2></a>
-                </li>
-                <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2013)">
-                    <img src="img/years/2013.png">
-                    <h2>ឆ្នាំ ២០១៣</h2></a>
+                <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2015)">
+                    <img src="img/years/2015.png">
+                <h2>ឆ្នាំ ២០១៥</h2></a>
                 </li>
                 <li><a href="#subject-year-question" data-transition="slide" onclick="bacIIModel.fetchQuestion(2014)">
                     <img src="img/years/2014.png">
-                <h2>ឆ្នាំ ២០១៤</h2></a>
+                    <h2>ឆ្នាំ ២០១៤</h2></a>
                 </li>
             </ul>
         </div>
         <div data-role="page" id="subject-year-question" class="my-page">
-            <!--<nd2-include data-src="component/panel.left.html"></nd2-include>-->
             <nd2-include data-src="component/Header2.html"></nd2-include>
             <div id="question-list"></div>
         </div>
         <div data-role="page" id="question-answer" class="my-page">
-            <!--<nd2-include data-src="component/panel.left.html"></nd2-include>-->
             <nd2-include data-src="component/Header2.html"></nd2-include>
             <div id="answer"></div>
         </div>
@@ -70,8 +63,8 @@
         <script src="js/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
         <script src="js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="js/libs/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
-        <script src="vendor/waves/waves.min.js"></script>
-        <script src="vendor/wow/wow.min.js"></script>
+<!--        <script src="vendor/waves/waves.min.js"></script>
+        <script src="vendor/wow/wow.min.js"></script>-->
         <script src="js/nativedroid2.js"></script>
         <script src="js/nd2settings.js"></script>
         <!--<script src="js/app/action/action.js" type="text/javascript"></script>-->

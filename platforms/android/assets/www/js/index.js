@@ -1,4 +1,4 @@
-var URL="http://192.168.1.101";
+var URL="http://bacii.camngo.website/";
 var Subject;
 var SubjectID;
 var Year;
@@ -11,9 +11,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function() {
-//       AppCache.clearAll();
-//        bacIIModel.fetchSubject();
-        bacIIView.renderSubject();
+        bacIIModel.fetchSubject();
     }
     
 };

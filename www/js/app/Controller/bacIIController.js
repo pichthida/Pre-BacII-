@@ -1,6 +1,10 @@
 var bacIIController ={
     question:[],
     answer:[],
+    clearText: function(){
+      $('#question-list').empty();
+      $('#answer').empty();
+    },
     setSubjectName: function(id){
         if (id=='1'){
             Subject="គីមីវិទ្យា";

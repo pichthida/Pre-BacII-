@@ -2,22 +2,19 @@ bacIIView={
     renderSubject: function(){
       var subjects=bacIIModel.getSubject(); 
         AppTemplate.process("subject-list.html", {subjects: subjects}, function (content) {
-//        console.log(content);
         $("#sub-list").html(content);
-        $("#sub-list").trigger('create');
+        $("#sub-list").trigger('create') ;
       }); 
     },
     renderYear: function(){
         var years=bacIIModel.getYear();        
         AppTemplate.process("subject-year.html", {years: years}, function (content) {
-//        console.log(content);
         $("#subject-year").html(content);
         $("#subject-year").trigger('create');
     });
     },
     renderQuestion: function(datas){               
         AppTemplate.process("question-list.html", {datas: datas}, function (content) {
-//        console.log(content);
         $("#question-list").html(content);
         $("#question-list").trigger('create');
         $("#question-title").html(Subject);

@@ -27,7 +27,6 @@ var bacIIModel ={
                 "image" : data.image,
                 "block" : c
             };
-            console.log(jsondata);
             bacIIModel.subject.push(jsondata);              
          });        
          bacIIView.renderSubject();

@@ -11,6 +11,9 @@ var bacIIController ={
         }else if (id=='3'){
             Subject="ប្រវត្តវិទ្យា";
             SubjectID=id;
+        }else if (id=='4'){
+            Subject="ភូមិវិទ្យា";
+            SubjectID=id;
         }
         $("#subject").html("<b>"+Subject+"</b>");
     },

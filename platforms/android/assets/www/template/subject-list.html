@@ -1,7 +1,7 @@
 <div class="ui-grid-a">
     {{#each subjects}}
         <div class="{{block}}">
-                  <a href="#subject-year" data-transition="slide" onclick="bacIIController.setSubjectName(1)">
+                  <a href="#subject-year" data-transition="slide" onclick="bacIIController.setSubjectName({{id}})">
                     <img src="http://bacii.camngo.website/{{image}}"/>
                   </a>
         </div>

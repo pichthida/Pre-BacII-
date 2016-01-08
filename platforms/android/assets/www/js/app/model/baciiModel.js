@@ -27,44 +27,26 @@ var bacIIModel ={
                 "image" : data.image,
                 "block" : c
             };
-            bacIIModel.subject.push(jsondata);              
+            bacIIModel.subject.push(jsondata);
+//              bacIIView.renderSubject(jsondata);
          });        
-         bacIIView.renderSubject();
+         bacIIView.renderSubject(bacIIModel.subject);
       },
       error: function (error) {       
         console.log('error ; ', error);
         }
       });
     },
-    fetchYear: function(){      
-      $.ajax({
-      type: "GET",
-      datatype: "JSON",
-      url: URL+"/bacii/year_json.php",
-      crossDomain: true,
-      success: function (years) {
-        $.map(years,function(year){
-           var jsonYear={
-               "id": year.id,
-               "year": year.year
-           }
-           bacIIModel.year.push(jsonYear);
-        });        
-        bacIIView.renderYear();
-      },
-      error: function (error) {       
-        console.log('error ; ', error);
-      }        
-      });
-    },
     fetchQuestion: function(year){
+      $("#loading").show();
       Year=year;
       $.ajax({
       type: "GET",
       datatype: "JSON",
       url: URL+"question_json.php",
       crossDomain: true,
-      success: function (datas) {                
+      success: function (datas) {              
+         $("#loading").hide();
 //        bacIIView.renderQuestion(datas,year);
           bacIIController.filterQuestion(datas);
       },
@@ -73,13 +55,15 @@ var bacIIModel ={
       }        
       });
     },
-    fetchAnswer: function(questionID){
+    fetchAnswer: function(questionID){ 
+      $("#loading1").show();
       $.ajax({
       type: "GET",
       datatype: "JSON",
       url: URL+"question_json.php",
       crossDomain: true,
       success: function (datas) {
+          $("#loading1").hide();
           bacIIController.filterAnswer(datas,questionID);
       },
       error: function (error) {       

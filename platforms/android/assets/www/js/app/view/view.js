@@ -1,26 +1,24 @@
 bacIIView={
-    renderSubject: function(){
-      var subjects=bacIIModel.getSubject(); 
+    renderSubject: function(subjects){
+//      var subjects=bacIIModel.getSubject();
         AppTemplate.process("subject-list.html", {subjects: subjects}, function (content) {
-//        console.log(content);
         $("#sub-list").html(content);
         $("#sub-list").trigger('create');
+        bacIIModel.subject=[];
       }); 
     },
     renderYear: function(){
         var years=bacIIModel.getYear();        
         AppTemplate.process("subject-year.html", {years: years}, function (content) {
-//        console.log(content);
         $("#subject-year").html(content);
         $("#subject-year").trigger('create');
     });
     },
     renderQuestion: function(datas){               
         AppTemplate.process("question-list.html", {datas: datas}, function (content) {
-//        console.log(content);
         $("#question-list").html(content);
         $("#question-list").trigger('create');
-        $("#question-title").html(Subject);
+        $("#question-title").html(Subject+" - "+Year);
         bacIIController.question=[];
     });
     },
@@ -28,7 +26,7 @@ bacIIView={
         AppTemplate.process("Answer.html", {datas: datas}, function (content) {
         $("#answer").html(content);
         $("#answer").trigger('create');
-//        $("#title").html(Subject);
+        $("#answer-title").html(Subject+" - "+Year);
         bacIIController.answer=[];
     });
     }

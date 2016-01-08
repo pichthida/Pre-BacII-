@@ -36,3 +36,8 @@
 .khmer-Title {
     font-family: 'Muol';
 }
+#loading, #loading1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

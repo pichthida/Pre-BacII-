@@ -22,3 +22,22 @@
 .button{
     background:grey;
 }
+@font-face {
+    font-family: 'Hanuman';
+    src: url('fonts/Hanuman.ttf');
+}
+.khmer-text {
+    font-family: 'Hanuman';
+}
+@font-face {
+    font-family: 'Muol';
+    src: url('fonts/KhmerOS_muollight.ttf');
+}
+.khmer-Title {
+    font-family: 'Muol';
+}
+#loading, #loading1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

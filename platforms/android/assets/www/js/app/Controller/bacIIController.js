@@ -1,6 +1,12 @@
 var bacIIController ={
     question:[],
     answer:[],
+    clearText: function(){
+      $('#question-list').empty();
+    },
+    clearText2: function(){
+      $('#answer').empty();
+    },
     setSubjectName: function(id){
         if (id=='1'){
             Subject="គីមីវិទ្យា";
@@ -10,6 +16,9 @@ var bacIIController ={
             SubjectID=id;
         }else if (id=='3'){
             Subject="ប្រវត្តវិទ្យា";
+            SubjectID=id;
+        }else if (id=='4'){
+            Subject="គណិតវិទ្យា";
             SubjectID=id;
         }
         $("#subject").html("<b>"+Subject+"</b>");
